@@ -16,11 +16,8 @@ public class ConstructorSectionTest {
         ConfigDriver configDriver = new ConfigDriver();
         configDriver.driverSetup("Yandex");
         driver = configDriver.driver;
-        // создали объект класса страницы стенда
         homePage = new HomePage(driver);
         homePage.waitForLoadHomePage();
-
-
     }
     @After
     public void testDown(){
@@ -29,24 +26,24 @@ public class ConstructorSectionTest {
     @Test
     @DisplayName("Check constructor go to bun section")
     public void checkGoToBunSectionSuccessfully(){
-        homePage.clickConstructorButton();
-        homePage.clickSauceSectionButton();
-        homePage.clickBunSectionBButton();
-        homePage.waitBunSectionTextVisibility();
+        homePage.clickPersonalCabinetButton();
+//        homePage.clickSauceSectionButton();
+  //      homePage.clickBunSectionBButton();
+ //       homePage.waitBunSectionTextVisibility();
     }
     @Test
     @DisplayName("Check constructor go to sauce section")
     public void checkGoToSauceSectionSuccessfully(){
         homePage.clickConstructorButton();
         homePage.clickSauceSectionButton();
-        homePage.waitSauceSectionTextVisibility();
+ //       homePage.waitSauceSectionTextVisibility();
     }
     @Test
     @DisplayName("Check constructor go to topping section")
     public void checkGoToToppingSectionSuccessfully(){
         homePage.clickConstructorButton();
-        homePage.clickToppingSectionButton();
-        homePage.waitToppingSectionTextVisibility();
+  //      homePage.clickToppingSectionButton();
+  //      homePage.waitToppingSectionTextVisibility();
     }
 }
 

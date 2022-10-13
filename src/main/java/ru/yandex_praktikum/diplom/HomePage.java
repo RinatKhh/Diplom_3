@@ -10,16 +10,16 @@ import java.time.Duration;
 public class HomePage {
     private final WebDriver driver;
     private final By signInButton = By.xpath(".//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg' and text() = 'Войти в аккаунт']");
-    private final By personalCabinetButton = By.xpath(".//p[@class = 'AppHeader_header__linkText__3q_va ml-2' and text() = 'Личный Кабинет']");
-    private final By constructorButton =By.xpath(".//p[@class = 'AppHeader_header__linkText__3q_va ml-2' and text() = 'Конструктор']");
+    private final By personalCabinetButton = By.xpath(".//p[text() = 'Личный Кабинет']");
+    private final By constructorButton =By.xpath(".//p[text() = 'Конструктор']");
     private final By logoButton = By.className("AppHeader_header__logo__2D0X2");
     private final By orderPlaceButton = By.xpath(".//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg' and text() = 'Оформить заказ']");
-    private final By bunSectionButton  = By.xpath(".//span[@class = 'text text_type_main-default' and text() = 'Булки']");
-    private final By sauceSectionButton  = By.xpath(".//span[@class = 'text text_type_main-default' and text() = 'Соусы']");
-    private final By toppingSectionButton  = By.xpath(".//span[@class = 'text text_type_main-default' and text() = 'Начинки']");
-    private final By bunSectionText = By.xpath(".//h2[@class = 'text text_type_main-medium mb-6 mt-10' and text() = 'Булки']");
-    private final By sauceSectionText = By.xpath(".//h2[@class = 'text text_type_main-medium mb-6 mt-10' and text() = 'Соусы']");
-    private final By toppingSectionText = By.xpath(".//h2[@class = 'text text_type_main-medium mb-6 mt-10' and text() = 'Начинки']");
+    private final By bunSectionButton  = By.xpath(".//span[text() = 'Булки']");
+    private final By sauceSectionButton  = By.xpath(".//span[text() = 'Соусы']");
+    private final By toppingSectionButton  = By.xpath(".//span[text() = 'Начинки']");
+    private final By bunSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Булки']");
+    private final By sauceSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Соусы']");
+    private final By toppingSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Начинки']");
     private final By textLoadedPage = By.xpath(".//*[text() = 'Соберите бургер']");
 
     public HomePage(WebDriver driver) {
@@ -56,17 +56,22 @@ public class HomePage {
         new WebDriverWait(driver,  Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(orderPlaceButton));
     }
-    public void waitBunSectionTextVisibility(){
-        new WebDriverWait(driver,  Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(bunSectionText));
+    public boolean isElementPresent(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        }
+        catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
     }
-    public void waitSauceSectionTextVisibility(){
-        new WebDriverWait(driver,  Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(sauceSectionText));
+    public boolean isBunSectionPresent(){
+        return isElementPresent(bunSection);
     }
-    public void waitToppingSectionTextVisibility(){
-        new WebDriverWait(driver,  Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(toppingSectionText));
+    public boolean isSauceSectionPresent(){
+        return isElementPresent(sauceSection);
     }
-
+    public boolean isToppingSectionPresent(){
+        return isElementPresent(toppingSection);
+    }
 }

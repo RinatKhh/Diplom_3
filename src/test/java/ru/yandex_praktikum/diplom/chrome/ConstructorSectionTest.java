@@ -2,6 +2,7 @@ package ru.yandex_praktikum.diplom.chrome;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -32,21 +33,21 @@ public class ConstructorSectionTest {
         homePage.clickConstructorButton();
         homePage.clickSauceSectionButton();
         homePage.clickBunSectionBButton();
-        homePage.waitBunSectionTextVisibility();
+        Assert.assertTrue(homePage.isBunSectionPresent());
     }
     @Test
     @DisplayName("Check constructor go to sauce section")
     public void checkGoToSauceSectionSuccessfully(){
         homePage.clickConstructorButton();
         homePage.clickSauceSectionButton();
-        homePage.waitSauceSectionTextVisibility();
+        Assert.assertTrue(homePage.isSauceSectionPresent());
     }
     @Test
     @DisplayName("Check constructor go to topping section")
     public void checkGoToToppingSectionSuccessfully(){
         homePage.clickConstructorButton();
         homePage.clickToppingSectionButton();
-        homePage.waitToppingSectionTextVisibility();
+        Assert.assertTrue(homePage.isToppingSectionPresent());
     }
 }
 
