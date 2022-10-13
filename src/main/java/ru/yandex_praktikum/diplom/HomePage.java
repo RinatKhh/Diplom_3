@@ -20,7 +20,7 @@ public class HomePage {
     private final By bunSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Булки']");
     private final By sauceSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Соусы']");
     private final By toppingSection = By.xpath(".//div[@class = 'tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']/span[text() = 'Начинки']");
-    private final By textLoadedPage = By.xpath(".//*[text() = 'Соберите бургер']");
+    private final By textLoadedPage = By.xpath(".//h1[text() = 'Соберите бургер']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;

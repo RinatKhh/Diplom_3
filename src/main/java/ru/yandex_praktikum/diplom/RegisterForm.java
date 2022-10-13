@@ -17,7 +17,7 @@ public class RegisterForm {
     private final By signInButton = By.className("Auth_link__1fOlj");
     private final By incorrectPasswordText = By.xpath(".//p[@class = 'input__error text_type_main-default' and text() = 'Некорректный пароль']");
     public String email;
-    String name;
+    public String name;
     public String password;
 
     public RegisterForm(WebDriver driver) {

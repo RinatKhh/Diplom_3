@@ -16,23 +16,27 @@ public class SignInTest {
     private InputForm inputForm;
     private RegisterForm registerForm;
     private PasswordRecoveryForm passwordRecoveryForm;
+    String accessToken = "";
     @Before
     public void setUp() {
         ConfigDriver configDriver = new ConfigDriver();
         configDriver.driverSetup("Yandex");
         driver = configDriver.driver;
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         homePage = new HomePage(driver);
         inputForm = new InputForm(driver);
         registerForm = new RegisterForm(driver);
         passwordRecoveryForm = new PasswordRecoveryForm(driver);
         homePage.waitForLoadHomePage();
-        homePage.clickSignInButton();
-        inputForm.clickRegisterButton();
-        registerForm.register(false);
+        // регистрация пользователя
+        User user = new User(registerForm.email,registerForm.password,registerForm.name);
+        accessToken = UserMethodApi.createUser(user).then().extract().path("accessToken");
+
     }
     @After
     public void testDown(){
+        if (accessToken!=null) {
+            UserMethodApi.DeleteUser(accessToken);
+        }
         driver.quit();
     }
     @Test
@@ -57,7 +61,7 @@ public class SignInTest {
     @Test
     @DisplayName("Check SigIn button from register form")
     public void checkSigInFromRegisterFormSuccessfully() throws InterruptedException {
-        inputForm.waitForLoadInputForm();
+        homePage.clickPersonalCabinetButton();
         inputForm.clickRegisterButton();
         registerForm.clickSignInButton();
         inputForm.waitForLoadInputForm();
@@ -67,7 +71,7 @@ public class SignInTest {
     @Test
     @DisplayName("Check SigIn button from recovery password form")
     public void checkSigInFromRecoveryPasswordFormSuccessfully() throws InterruptedException {
-        inputForm.waitForLoadInputForm();
+        homePage.clickPersonalCabinetButton();
         inputForm.clickRecoverPasswordButton();
         passwordRecoveryForm.clickSignInButton();
         inputForm.waitForLoadInputForm();

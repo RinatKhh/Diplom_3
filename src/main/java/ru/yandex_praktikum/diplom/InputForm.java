@@ -16,7 +16,7 @@ public class InputForm {
     private final By recoverPasswordButton = By.xpath(".//a[@class = 'Auth_link__1fOlj' and text() = 'Восстановить пароль']");
     private final By emailField = By.xpath(".//input[@class = 'text input__textfield text_type_main-default' and @type ='text']");
     private final By passwordField = By.xpath(".//input[@class = 'text input__textfield text_type_main-default' and @type ='password']");
-    private final By inputText = By.xpath(".//*[text() = 'Вход']");
+    private final By inputText = By.xpath(".//h2[text() = 'Вход']");
 
     public InputForm(WebDriver driver) {
         this.driver = driver;

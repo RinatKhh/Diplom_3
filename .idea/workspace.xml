@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.1 edit ConstructorSection locator">
+    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.1 add delete User with form RegisterForm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/ApiSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/ApiSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/InputForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/InputForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/RegisterForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/RegisterForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/SignInTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,38 +58,7 @@
       <command value="mvn clean test allure:serve" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RegisterTest">
-    <configuration name="ConstructorSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.ConstructorSectionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstructorSectionTest.checkGoToBunSectionSuccessfully (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.ConstructorSectionTest" />
-      <option name="METHOD_NAME" value="checkGoToBunSectionSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SignInTest">
     <configuration name="RegisterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <extension name="coverage">
@@ -135,13 +106,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.SignInTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignInTest.checkSigInFromHomePageSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.SignInTest" />
+      <option name="METHOD_NAME" value="checkSigInFromHomePageSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SignInTest" />
+        <item itemvalue="JUnit.SignInTest.checkSigInFromHomePageSuccessfully" />
         <item itemvalue="JUnit.RegisterTest" />
         <item itemvalue="JUnit.RegisterTest.checkRegisterIncorrectPassword" />
         <item itemvalue="JUnit.RegisterTest.checkRegisterSuccessfully" />
-        <item itemvalue="JUnit.ConstructorSectionTest" />
-        <item itemvalue="JUnit.ConstructorSectionTest.checkGoToBunSectionSuccessfully (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665638259693</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ver 1.1 add delete User with form RegisterForm">
+      <created>1665641162421</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665641162421</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,7 +194,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ver 1.0 add test and allure report" />
     <MESSAGE value="ver 1.1 edit ConstructorSection locator" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver 1.1 edit ConstructorSection locator" />
+    <MESSAGE value="ver 1.1 add delete User with form RegisterForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 1.1 add delete User with form RegisterForm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

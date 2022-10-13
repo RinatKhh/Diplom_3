@@ -10,10 +10,7 @@ public class ApiSetting {
     static final String REGISTER = "api/auth/register";
     static final String DELETE = "api/auth/user";
     static final String SIGNIN = "api/auth/login";
-    static final String EDITUSER = "api/auth/user";
     static final String SUBSTRING = "Bearer ";
-    static final String ORDER= "api/orders";
-    static final String INGREDIENTS = "api/ingredients";
     protected static RequestSpecification getSpec() {
         return given()
                 .header("Content-Type", "application/json")
