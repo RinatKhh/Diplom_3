@@ -1,6 +1,8 @@
 package ru.yandex_praktikum.diplom;
 
 import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+
 public class UserMethodApi extends ApiSetting {
     //создать пользователя
     public static Response createUser(User user) {
@@ -21,13 +23,5 @@ public class UserMethodApi extends ApiSetting {
                 .body(user)
                 .when()
                 .post(SIGNIN);
-    }
-    // поменять данные пользователя
-    public static Response ChangDataUser(String accessToken, User newDataUser) {
-        return getSpec().given().auth()
-                .oauth2(getAccessToken(accessToken))
-                .body(newDataUser)
-                .when()
-                .patch(EDITUSER);
     }
 }

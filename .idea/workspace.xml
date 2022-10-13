@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.0 add test and allure report">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/ApiSetting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" afterDir="false" />
+    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.1 edit ConstructorSection locator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/ConstructorSectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/ConstructorSectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/ConstructorSectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/ConstructorSectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/yandex_praktikum/Diplom/Diplom_2/pom.xml",
+    "last_opened_file_path": "C:/yandex_praktikum/Diplom/Diplom_2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -60,7 +56,7 @@
       <command value="mvn clean test allure:serve" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ConstructorSectionTest">
+  <component name="RunManager" selected="JUnit.RegisterTest">
     <configuration name="ConstructorSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <extension name="coverage">
@@ -92,49 +88,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructorSectionTest.checkGoToBunSectionSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.yandex.*" />
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.yandex" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.yandex.ConstructorSectionTest" />
-      <option name="METHOD_NAME" value="checkGoToBunSectionSuccessfully" />
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.RegisterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.checkRegisterIncorrectPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.RegisterTest" />
+      <option name="METHOD_NAME" value="checkRegisterIncorrectPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstructorSectionTest.checkGoToSauceSectionSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterTest.checkRegisterSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.yandex.*" />
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.yandex" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.yandex.ConstructorSectionTest" />
-      <option name="METHOD_NAME" value="checkGoToSauceSectionSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConstructorSectionTest.checkGoToToppingSectionSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.yandex.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.yandex" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.yandex.ConstructorSectionTest" />
-      <option name="METHOD_NAME" value="checkGoToToppingSectionSuccessfully" />
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.RegisterTest" />
+      <option name="METHOD_NAME" value="checkRegisterSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RegisterTest" />
+        <item itemvalue="JUnit.RegisterTest.checkRegisterIncorrectPassword" />
+        <item itemvalue="JUnit.RegisterTest.checkRegisterSuccessfully" />
         <item itemvalue="JUnit.ConstructorSectionTest" />
         <item itemvalue="JUnit.ConstructorSectionTest.checkGoToBunSectionSuccessfully (1)" />
-        <item itemvalue="JUnit.ConstructorSectionTest.checkGoToBunSectionSuccessfully" />
-        <item itemvalue="JUnit.ConstructorSectionTest.checkGoToToppingSectionSuccessfully" />
-        <item itemvalue="JUnit.ConstructorSectionTest.checkGoToSauceSectionSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665084619510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ver 1.1 edit ConstructorSection locator">
+      <created>1665638259693</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665638259693</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,7 +184,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ver 1.0 add test and allure report" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver 1.0 add test and allure report" />
+    <MESSAGE value="ver 1.1 edit ConstructorSection locator" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 1.1 edit ConstructorSection locator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

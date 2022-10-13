@@ -5,15 +5,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import ru.yandex_praktikum.diplom.InputForm;
-import ru.yandex_praktikum.diplom.RegisterForm;
-import ru.yandex_praktikum.diplom.ConfigDriver;
-import ru.yandex_praktikum.diplom.HomePage;
+import ru.yandex_praktikum.diplom.*;
 
 public class RegisterTest {
     WebDriver driver;
     private InputForm inputForm;
     private RegisterForm registerForm;
+    String accessToken = "";
     @Before
     public void setUp() {
         ConfigDriver configDriver = new ConfigDriver();
@@ -23,7 +21,6 @@ public class RegisterTest {
         HomePage homePage = new HomePage(driver);
         inputForm = new InputForm(driver);
         registerForm = new RegisterForm(driver);
-        // дождались загрузки страницы и прокликали до регистрации
         homePage.waitForLoadHomePage();
         homePage.clickSignInButton();
         inputForm.clickRegisterButton();
@@ -31,6 +28,11 @@ public class RegisterTest {
     }
     @After
     public void testDown(){
+        User user = new User(registerForm.email,registerForm.password);
+        accessToken = UserMethodApi.SigInUser(user).then().extract().path("accessToken");
+        if (accessToken!=null) {
+            UserMethodApi.DeleteUser(accessToken);
+        }
         driver.quit();
     }
     @Test
