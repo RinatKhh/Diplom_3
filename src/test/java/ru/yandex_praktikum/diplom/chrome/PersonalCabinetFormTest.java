@@ -13,35 +13,35 @@ public class PersonalCabinetFormTest {
     private HomePage homePage;
     private InputForm inputForm;
     private PersonalCabinetForm personalCabinetForm;
+    String accessToken = "";
     @Before
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         ConfigDriver configDriver = new ConfigDriver();
         configDriver.driverSetup("Chrome");
-        driver = configDriver.driver;
         // создали объект класса страницы стенда
+        driver = configDriver.driver;
+        personalCabinetForm = new PersonalCabinetForm(driver);
         homePage = new HomePage(driver);
         inputForm = new InputForm(driver);
         RegisterForm registerForm = new RegisterForm(driver);
-        personalCabinetForm = new PersonalCabinetForm(driver);
-        // дождались загрузки страницы и прокликали до регистрации
         homePage.waitForLoadHomePage();
-        homePage.clickSignInButton();
-        inputForm.clickRegisterButton();
-        registerForm.register(false);
+        // регистрация пользователя
+        User user = new User(registerForm.email, registerForm.password, registerForm.name);
+        accessToken = UserMethodApi.createUser(user).then().extract().path("accessToken");
+        homePage.clickPersonalCabinetButton();
         inputForm.waitForLoadInputForm();
-        inputForm.setEmailField(registerForm.email);
-        inputForm.setPasswordField(registerForm.password);
-        inputForm.clickSignInButton();
-        homePage.waitForLoadHomePage();
-
+        inputForm.signIn(registerForm.email, registerForm.password);
     }
     @After
     public void testDown(){
+        if (accessToken!=null) {
+            UserMethodApi.DeleteUser(accessToken);
+        }
         driver.quit();
     }
     @Test
     @DisplayName("Check go from homepage to personal cabinet")
-    public void checkGoToPersonalCabinetSuccessfully(){
+    public void checkGoToPersonalCabinetSuccessfully()  {
         homePage.clickPersonalCabinetButton();
         personalCabinetForm.waitExitButtonVisibility();
     }
