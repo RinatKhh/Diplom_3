@@ -1,26 +1,39 @@
-package ru.yandex_praktikum.diplom.yandex;
+package ru.yandex_praktikum.diplom;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import ru.yandex_praktikum.diplom.*;
 
-import java.time.Duration;
-
-
+@RunWith(Parameterized.class)
 public class SignInTest {
     WebDriver driver;
+    String driverName;
     private HomePage homePage;
     private InputForm inputForm;
     private RegisterForm registerForm;
     private PasswordRecoveryForm passwordRecoveryForm;
     String accessToken = "";
+
+    public SignInTest(String driverName) {
+        this.driverName = driverName;
+    }
+
+    @Parameterized.Parameters
+    public static Object[][] getDriverName() {
+        return new Object[][]{
+                { "Chrome"},
+                { "Yandex"},
+        };
+    }
     @Before
     public void setUp() {
         ConfigDriver configDriver = new ConfigDriver();
-        configDriver.driverSetup("Yandex");
+        configDriver.driverSetup(driverName);
         driver = configDriver.driver;
         homePage = new HomePage(driver);
         inputForm = new InputForm(driver);

@@ -1,7 +1,6 @@
 package ru.yandex_praktikum.diplom;
 
 import io.restassured.response.Response;
-import io.restassured.response.ValidatableResponse;
 
 public class UserMethodApi extends ApiSetting {
     //создать пользователя

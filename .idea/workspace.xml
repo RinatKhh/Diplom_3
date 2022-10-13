@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.1 add delete User with form SignInForm">
+    <list default="true" id="4184e19c-2d1e-4662-949b-0ca9572975ef" name="Changes" comment="ver 1.1 add create,delete User with form PersonalCabinetform">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex_praktikum/diplom/UserMethodApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/ConstructorSectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/ConstructorSectionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/PersonalCabinetFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/PersonalCabinetFormTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/PersonalCabinetFormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/PersonalCabinetFormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/chrome/SignInTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/ConstructorSectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/PersonalCabinetFormTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/RegisterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/SignInTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +46,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/yandex_praktikum/Diplom/Diplom_2",
+    "last_opened_file_path": "C:/yandex_praktikum/Diplom/Diplom_3/src/main/resources",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\yandex_praktikum\Diplom\Diplom_3\src\main\resources" />
       <recent name="C:\yandex_praktikum\Diplom\Diplom_3\src\main\java\ru\yandex_praktikum\diplom" />
       <recent name="C:\yandex_praktikum\Diplom_3" />
       <recent name="C:\yandex_praktikum\Diplom_3\src" />
@@ -51,10 +60,26 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn test" />
       <command value="mvn clean test allure:serve" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PersonalCabinetFormTest">
+  <component name="RunManager" selected="JUnit.SignInTest">
+    <configuration name="ConstructorSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
+      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.ConstructorSectionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PersonalCabinetFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Diplom_3" />
       <extension name="coverage">
@@ -82,21 +107,6 @@
       <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.PersonalCabinetFormTest" />
       <option name="METHOD_NAME" value="checkGoToPersonalCabinetSuccessfully" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RegisterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Diplom_3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.yandex_praktikum.diplom.chrome.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.yandex_praktikum.diplom.chrome" />
-      <option name="MAIN_CLASS_NAME" value="ru.yandex_praktikum.diplom.chrome.RegisterTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SignInTest" />
+        <item itemvalue="JUnit.ConstructorSectionTest" />
         <item itemvalue="JUnit.PersonalCabinetFormTest" />
         <item itemvalue="JUnit.PersonalCabinetFormTest.checkGoToPersonalCabinetSuccessfully" />
-        <item itemvalue="JUnit.SignInTest" />
         <item itemvalue="JUnit.SignInTest.checkSigInFromHomePageSuccessfully" />
-        <item itemvalue="JUnit.RegisterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665643847052</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ver 1.1 add create,delete User with form PersonalCabinetform">
+      <created>1665645520298</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665645520298</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,22 +215,7 @@
     <MESSAGE value="ver 1.1 edit ConstructorSection locator" />
     <MESSAGE value="ver 1.1 add delete User with form RegisterForm" />
     <MESSAGE value="ver 1.1 add delete User with form SignInForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver 1.1 add delete User with form SignInForm" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/ConstructorSectionTest.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ru/yandex_praktikum/diplom/yandex/ConstructorSectionTest.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="ver 1.1 add create,delete User with form PersonalCabinetform" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 1.1 add create,delete User with form PersonalCabinetform" />
   </component>
 </project>

@@ -1,22 +1,38 @@
-package ru.yandex_praktikum.diplom.yandex;
+package ru.yandex_praktikum.diplom;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import ru.yandex_praktikum.diplom.*;
 
+@RunWith(Parameterized.class)
 public class PersonalCabinetFormTest {
     WebDriver driver;
+    String driverName;
     private HomePage homePage;
     private InputForm inputForm;
     private PersonalCabinetForm personalCabinetForm;
     String accessToken = "";
+
+    public PersonalCabinetFormTest(String driverName) {
+        this.driverName = driverName;
+    }
+    @Parameterized.Parameters
+    public static Object[][] getDriverName() {
+        return new Object[][]{
+                { "Chrome"},
+                { "Yandex"},
+        };
+    }
+
     @Before
     public void setUp() throws InterruptedException {
         ConfigDriver configDriver = new ConfigDriver();
-        configDriver.driverSetup("Yandex");
+        configDriver.driverSetup(driverName);
         // создали объект класса страницы стенда
         driver = configDriver.driver;
         personalCabinetForm = new PersonalCabinetForm(driver);
@@ -50,7 +66,7 @@ public class PersonalCabinetFormTest {
         homePage.clickPersonalCabinetButton();
         homePage.clickConstructorButton();
         homePage.waitForLoadHomePage();
-    }
+        }
     @Test
     @DisplayName("Check go from personal cabinet to logo")
     public void checkGoToLogoSuccessfully(){

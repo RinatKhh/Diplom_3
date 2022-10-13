@@ -1,21 +1,37 @@
-package ru.yandex_praktikum.diplom.chrome;
+package ru.yandex_praktikum.diplom;
 
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import ru.yandex_praktikum.diplom.*;
-
+@RunWith(Parameterized.class)
 public class RegisterTest {
     WebDriver driver;
+    String driverName;
     private InputForm inputForm;
     private RegisterForm registerForm;
     String accessToken = "";
+
+    public RegisterTest(String driverName) {
+        this.driverName = driverName;
+    }
+
+
+    @Parameterized.Parameters
+    public static Object[][] getDriverName() {
+        return new Object[][]{
+                { "Chrome"},
+                { "Yandex"},
+        };
+    }
     @Before
     public void setUp() {
         ConfigDriver configDriver = new ConfigDriver();
-        configDriver.driverSetup("Chrome");
+        configDriver.driverSetup(driverName);
         driver = configDriver.driver;
         // создали объект класса страницы стенда
         HomePage homePage = new HomePage(driver);
