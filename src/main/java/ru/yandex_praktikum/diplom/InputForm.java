@@ -6,7 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class InputForm {
     private final WebDriver driver;
@@ -41,11 +40,10 @@ public class InputForm {
         driver.findElement(registerButton).click();
     }
     // вход в систему
-    public void signIn(String email,String password) throws InterruptedException {
-        waitForLoadSignInButton();
+    public void signIn(String email,String password)  {
         setEmailField(email);
         setPasswordField(password);
-        TimeUnit.SECONDS.sleep(1);
+        waitForLoadSignInButton();
         clickSignInButton();
     }
 

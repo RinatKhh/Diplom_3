@@ -8,8 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
-import ru.yandex_praktikum.diplom.ConfigDriver;
-import ru.yandex_praktikum.diplom.HomePage;
+
 @RunWith(Parameterized.class)
 public class ConstructorSectionTest {
     String driverName;
