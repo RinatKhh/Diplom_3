@@ -16,15 +16,12 @@ public class RegisterForm {
     private final By registerButton = By.xpath(".//button[@class = 'button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']");
     private final By signInButton = By.className("Auth_link__1fOlj");
     private final By incorrectPasswordText = By.xpath(".//p[@class = 'input__error text_type_main-default' and text() = 'Некорректный пароль']");
-    public String email;
-    public String name;
-    public String password;
+    public String email =  RandomStringUtils.randomAlphanumeric(6) + "@test.com";
+    public String name = RandomStringUtils.randomAlphabetic(6);
+    public String password = "Password";
 
     public RegisterForm(WebDriver driver) {
         this.driver = driver;
-        email  = RandomStringUtils.randomAlphanumeric(6) + "@test.com";
-        name  = RandomStringUtils.randomAlphabetic(6);
-        password = "Password";
     }
 
     public void setNameField(String name){

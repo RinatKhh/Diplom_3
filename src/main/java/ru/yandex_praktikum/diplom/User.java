@@ -1,4 +1,7 @@
 package ru.yandex_praktikum.diplom;
+
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class User {
         private String email;
         private String password;
@@ -13,6 +16,7 @@ public class User {
         this.name = name;
 
     }
+
     public User(String email, String password) {
         this.email = email;
         this.password = password;
