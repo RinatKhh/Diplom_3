@@ -54,13 +54,13 @@ public class RegisterTest {
     @Test
     @DisplayName("Check register Successfully new user")
     public void checkRegisterSuccessfully(){
-        registerForm.register(false);
+        registerForm.register("Password");
         inputForm.waitForLoadInputForm();
     }
     @Test
     @DisplayName("Check register new user incorrect password")
     public void checkRegisterIncorrectPassword(){
-        registerForm.register(true);
+        registerForm.register("PasswordError");
         registerForm.waitIncorrectPasswordTextVisibility();
     }
 }

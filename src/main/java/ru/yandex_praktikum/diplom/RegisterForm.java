@@ -43,8 +43,8 @@ public class RegisterForm {
         driver.findElement(signInButton).click();
     }
     // регистрация в системе, флаг проверяет какой пароль использовать (валидный / не валидный)
-    public void register(boolean passwordError){
-        if (passwordError) {
+    public void register(String passwordError){
+        if (passwordError.equals("PasswordError")) {
             password = "Pass";
         }
         setNameField(name);
