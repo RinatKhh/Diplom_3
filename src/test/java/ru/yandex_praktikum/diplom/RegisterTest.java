@@ -45,9 +45,9 @@ public class RegisterTest {
     @After
     public void testDown(){
         User user = new User(registerForm.email,registerForm.password);
-        accessToken = UserMethodApi.SigInUser(user).then().extract().path("accessToken");
+        accessToken = UserMethodApi.sigInUser(user).then().extract().path("accessToken");
         if (accessToken!=null) {
-            UserMethodApi.DeleteUser(accessToken);
+            UserMethodApi.deleteUser(accessToken);
         }
         driver.quit();
     }

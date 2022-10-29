@@ -30,7 +30,7 @@ public class PersonalCabinetFormTest {
     }
 
     @Before
-    public void setUp() throws InterruptedException {
+    public void setUp() {
         ConfigDriver configDriver = new ConfigDriver();
         configDriver.driverSetup(driverName);
         // создали объект класса страницы стенда
@@ -50,7 +50,7 @@ public class PersonalCabinetFormTest {
     @After
     public void testDown(){
         if (accessToken!=null) {
-            UserMethodApi.DeleteUser(accessToken);
+            UserMethodApi.deleteUser(accessToken);
         }
         driver.quit();
     }

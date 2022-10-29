@@ -48,13 +48,13 @@ public class SignInTest {
     @After
     public void testDown(){
         if (accessToken!=null) {
-            UserMethodApi.DeleteUser(accessToken);
+            UserMethodApi.deleteUser(accessToken);
         }
         driver.quit();
     }
     @Test
     @DisplayName("Check SigIn button from homepage form")
-    public void checkSigInFromHomePageSuccessfully() throws InterruptedException {
+    public void checkSigInFromHomePageSuccessfully()  {
         homePage.clickLogoButton();
         homePage.clickSignInButton();
         inputForm.waitForLoadInputForm();
@@ -63,7 +63,7 @@ public class SignInTest {
     }
     @Test
     @DisplayName("Check SigIn button from personal cabinet form")
-    public void checkSigInFromPersonalCabinetFormSuccessfully() throws InterruptedException {
+    public void checkSigInFromPersonalCabinetFormSuccessfully()  {
         homePage.clickLogoButton();
         homePage.clickPersonalCabinetButton();
         inputForm.waitForLoadInputForm();
@@ -73,7 +73,7 @@ public class SignInTest {
     }
     @Test
     @DisplayName("Check SigIn button from register form")
-    public void checkSigInFromRegisterFormSuccessfully() throws InterruptedException {
+    public void checkSigInFromRegisterFormSuccessfully()  {
         homePage.clickPersonalCabinetButton();
         inputForm.clickRegisterButton();
         registerForm.clickSignInButton();
@@ -83,7 +83,7 @@ public class SignInTest {
     }
     @Test
     @DisplayName("Check SigIn button from recovery password form")
-    public void checkSigInFromRecoveryPasswordFormSuccessfully() throws InterruptedException {
+    public void checkSigInFromRecoveryPasswordFormSuccessfully() {
         homePage.clickPersonalCabinetButton();
         inputForm.clickRecoverPasswordButton();
         passwordRecoveryForm.clickSignInButton();

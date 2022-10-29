@@ -11,13 +11,13 @@ public class UserMethodApi extends ApiSetting {
                 .post(REGISTER);
     }
     //удалить пользователя по токену
-    public  static void DeleteUser(String accessToken) {
+    public  static void deleteUser(String accessToken) {
         getSpec().auth()
                 .oauth2(getAccessToken(accessToken))
                 .delete(DELETE);
     }
     //залогиниться под пользователем
-    public static Response SigInUser(User user) {
+    public static Response sigInUser(User user) {
         return getSpec()
                 .body(user)
                 .when()
