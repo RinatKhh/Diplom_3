@@ -56,22 +56,14 @@ public class HomePage {
         new WebDriverWait(driver,  Duration.ofSeconds(5))
                 .until(ExpectedConditions.visibilityOfElementLocated(orderPlaceButton));
     }
-    public boolean isElementPresent(By by) {
-        try {
-            driver.findElement(by);
-            return true;
-        }
-        catch (org.openqa.selenium.NoSuchElementException e) {
-            return false;
-        }
-    }
+
     public boolean isBunSectionPresent(){
-        return isElementPresent(bunSection);
+        return  driver.findElement(bunSection).isDisplayed();
     }
     public boolean isSauceSectionPresent(){
-        return isElementPresent(sauceSection);
+        return  driver.findElement(sauceSection).isDisplayed();
     }
     public boolean isToppingSectionPresent(){
-        return isElementPresent(toppingSection);
+        return  driver.findElement(toppingSection).isDisplayed();
     }
 }
