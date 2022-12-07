@@ -1,9 +1,9 @@
 ## Тестирование веб-приложения [Stellar Burgers](https://stellarburgers.nomoreparties.site/)
 Учебный проект тестирования веб приложения в Google Chrome и Яндекс.Браузере.<br> используя паттерн POM.Создание  отчёта в Allure.<br>
 
-### Установка(предусловувия)
+### Установка(предусловия)
   Java 11
-  <br> Maven (make sure .m2 class path is set) <br>
+  <br> Maven <br>
 
 ### Отчет
 ##### Allure Report:
